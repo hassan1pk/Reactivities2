@@ -22,6 +22,7 @@ namespace Application.Activities
             {
                 _mapper = mapper;
                 _context = context;
+
             }
 
             public async Task<Unit> Handle(Command request, CancellationToken cancellationToken)
@@ -31,7 +32,9 @@ namespace Application.Activities
                 //activity.Title = request.Acitivty.Title ?? activity.Title;
                 //activity = _mapper.Map(request.Acitivty, activity);
 
-                activity = _mapper.Map<Activity>(request.Acitivty);
+
+                _mapper.Map(request.Acitivty, activity);
+
 
                 await _context.SaveChangesAsync();
 

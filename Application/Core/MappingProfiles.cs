@@ -1,4 +1,4 @@
-using System.Diagnostics;
+using Domain;
 using AutoMapper;
 
 namespace Application.Core
@@ -9,5 +9,7 @@ namespace Application.Core
         {
             CreateMap<Activity, Activity>();
         }
+
+
     }
 }
