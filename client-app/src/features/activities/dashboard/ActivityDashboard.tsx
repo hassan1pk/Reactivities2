@@ -16,7 +16,7 @@ function ActivityDashboard() {
     }, [loadActivities, activityRegistry.size])
 
 
-    if (loadingInitial) return <LoadingComponent content='Loading app' />
+    if (loadingInitial) return <LoadingComponent content='Loading activities...' />
 
     return (
         <Grid>
@@ -24,7 +24,7 @@ function ActivityDashboard() {
                 <ActivityList />
             </Grid.Column>
             <Grid.Column width='6'>
-                <ActivityFilters/>
+                <ActivityFilters />
             </Grid.Column>
         </Grid>
     )
